@@ -71,6 +71,9 @@ export function LoginForm({ className, ...props }: React.ComponentPropsWithoutRe
         options: {
           redirectTo,
           scopes: 'email profile openid',
+          queryParams: {
+            prompt: 'select_account',
+          },
         },
       })
       if (oauthError) throw oauthError
